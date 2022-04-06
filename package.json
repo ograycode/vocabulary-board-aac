@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "next": "12.1.4",
+    "ponyfill": "^0.0.1",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "react-say": "^2.1.0"
   },
   "devDependencies": {
     "eslint": "8.12.0",

@@ -70,7 +70,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 90%;
 }
 
 .card {
@@ -85,9 +85,7 @@
   max-width: 300px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
+.active {
   color: #0070f3;
   border-color: #0070f3;
 }
