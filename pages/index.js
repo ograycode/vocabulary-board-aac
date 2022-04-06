@@ -103,7 +103,8 @@ export default function Home() {
     setClicks(clicks + 1)
   }
 
-  const selectedButtonObj = data.views[viewId].buttons[selectedButton]
+  const selectedViewObj = data.views[viewId]
+  const selectedButtonObj = selectedViewObj.buttons[selectedButton]
 
   return (
     <div 
@@ -114,8 +115,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.title}>
-          {message ? data.views[viewId].prepend + message : ""}
-          {message ? <Say text={data.views[viewId].prepend + message} key={clicks}/> : ""}
+          {selectedViewObj.prepend ? selectedViewObj.prepend + message : ""}
+          {message ? <Say text={selectedViewObj.prepend + message} key={clicks}/> : ""}
         </div>
         <div className={styles.grid}>
           {cards}
