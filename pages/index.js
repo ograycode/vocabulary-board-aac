@@ -92,7 +92,7 @@ export default function Home() {
     return () => clearInterval(interval)
   }, [cards.length])
 
-  const clickHandler = (e, button) => {
+  const eventHandler = (e, button) => {
     if (button.view) {
       setViewId(button.view)
       setSelectedButton(0)
@@ -103,8 +103,14 @@ export default function Home() {
     setClicks(clicks + 1)
   }
 
+  const selectedButtonObj = data.views[viewId].buttons[selectedButton]
+
   return (
-    <div className={styles.container} onClick={(e) => clickHandler(e, data.views[viewId].buttons[selectedButton])}>
+    <div 
+      className={styles.container} 
+      onClick={(e) => eventHandler(e, selectedButtonObj)}
+      onTouchStart={(e) => eventHandler(e, selectedButtonObj)}
+      >
 
       <main className={styles.main}>
         <div className={styles.title}>
