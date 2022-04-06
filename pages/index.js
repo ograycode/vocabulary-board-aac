@@ -115,7 +115,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.title}>
-          {selectedViewObj.prepend ? selectedViewObj.prepend + message : ""}
+          {selectedViewObj.prepend || message ? selectedViewObj.prepend + message : ""}
           {message ? <Say text={selectedViewObj.prepend + message} key={clicks}/> : ""}
         </div>
         <div className={styles.grid}>
